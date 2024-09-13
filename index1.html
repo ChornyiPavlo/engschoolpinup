@@ -20,7 +20,7 @@
 <!-- Header Section -->
 <header class="header">
     <nav class="navbar navbar-expand-lg justify-content-between">
-        <a href="index.html" class="logo">İngilizce Okulu pin up</a>
+        <a href="index.html" class="logo">English school pinup</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="toggler-icon"></span>
@@ -302,6 +302,23 @@
         });
     });
 </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const faqItems = document.querySelectorAll(".faq-item");
+            faqItems.forEach(item => {
+                item.addEventListener("click", function () {
+                    faqItems.forEach(i => {
+                        i.classList.remove("open");
+                        i.querySelector(".faq-answer").classList.remove("active");
+                    });
+                    if (!this.classList.contains("open")) {
+                        this.classList.add("open");
+                        this.querySelector(".faq-answer").classList.add("active");
+                    }
+                });
+            });
+        });
+    </script>
 </div>
 <div id="original">
     <div class="wrap__btn--PxHri--section">
